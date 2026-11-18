@@ -1,11 +1,11 @@
 ## How it works
 
-Explain how your project works
+This project implements an SPI-controlled peripheral module that manages internal configuration and PWM registers.
 
 ## How to test
 
-Explain how to use your project
+Drive the SPI lines (SCLK, COPI, nCS) via the dedicated inputs to send 16-bit commands.
 
-## External hardSware
+## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+* Microcontroller (e.g., Arduino or Raspberry Pi Pico) to act as SPI controller.

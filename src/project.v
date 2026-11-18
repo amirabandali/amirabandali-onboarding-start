@@ -44,6 +44,6 @@ pwm_peripheral pwm_peripheral_inst (
   assign uio_oe  = 0;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, , ui_in[7:3], uio_in, 1'b0};
+  wire _unused = &{ena, clk, rst_n, ui_in[7:3], uio_in, 1'b0};
 
 endmodule
