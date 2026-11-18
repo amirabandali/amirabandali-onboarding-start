@@ -6,8 +6,6 @@
 `default_nettype none
 
 module tt_um_uwasic_onboarding_Amira_Bandali (
-  // Add this inside the module block
-    assign uio_oe = 8'hFF; // Set all IOs to output
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -16,13 +14,17 @@ module tt_um_uwasic_onboarding_Amira_Bandali (
     input  wire       ena,      // always 1 when the design is powered, so you can ignore it
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
+);
 
+  // Add this inside the module block
+    assign uio_oe = 8'hFF; // Set all IOs to output
+
+  // Create wires to refer to the values of the registers
     wire [7:0] en_reg_out_7_0;
     wire [7:0] en_reg_out_15_8;
     wire [7:0] en_reg_pwm_7_0;
     wire [7:0] en_reg_pwm_15_8;
     wire [7:0] pwm_duty_cycle;
-);
 
 // Instantiate the PWM module
 pwm_peripheral pwm_peripheral_inst (
